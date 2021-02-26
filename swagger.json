@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:3001"
+      "url": "http://getir-backend-challenge-dev.us-west-2.elasticbeanstalk.com"
     }
   ],
   "paths": {
