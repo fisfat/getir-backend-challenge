@@ -12,7 +12,7 @@ recordRouter.post('/', validate, fetchRecords);
 
 const bind = (app) => {
   app.use(`/guide`, swaggerUI.serve, swaggerUI.setup(swaggerFile));
-  app.use(`/ping`, (req, res) => res.status(200).json({ok: true, message: "Available!"}));
+  app.use(`/`, (req, res) => res.status(200).json({ok: true, message: "Server available! Use /fetch endpoint to process requests"}));
   app.use(`/fetch`, recordRouter);
 
   app.use((req, res) => notFound(res, 'Opps, page not found!'));
