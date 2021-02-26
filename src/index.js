@@ -20,9 +20,8 @@ app.use(cors());
 app.set('trust proxy', true);
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(helmet());
   app.use(compression());
-  app.use(morgan('combined'), { stream: { write: (message) => logger.info(message) } });
+  app.use(helmet());
 } else {
   app.use(morgan('dev'));
 }
